@@ -1,0 +1,173 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+/* Header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+}
+
+header h1{
+    color: white;  
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a{
+    /* border: 1px solid black; */
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.25s;
+    color: white;
+}
+
+nav a:hover{
+    background-color: rgba(255, 255, 255, 0.384);
+    text-decoration: underline;
+}
+
+.burger{
+    display: none;
+}
+
+.visible{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    right: 50%;
+}
+
+/* Connection */
+.connection{
+    background: linear-gradient(pink, violet);
+}
+
+.connection form, .settings form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.connection form button, .settings form button{
+    font-size: 16px;
+    width: 50%;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: violet;
+}
+
+.connection form button, .connection form input,
+.settings form button ,.settings form input{
+    border-radius: 50px;
+    border: none;
+}
+
+.settings form button{
+    background-color: black;
+    padding: 10px 0;
+}
+
+.connection form input, .settings form input{
+    font-size: 17px;
+    padding: 7px 10px;
+    width: 100%;
+    outline: none;
+}
+
+.settings form input{
+    width: 90%;
+}
+
+.connection, .settings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Contenue */
+.contenue{
+    background-color: rgba(71, 71, 77, 0.185);
+}
+
+.videos-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.videos-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    padding: 10px;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 686px) {
+
+    nav{
+        display: none;
+        background-color: black;
+        width: 50%;
+        height: 100vh;
+    }
+
+    nav a{
+        color: white;
+        font-size: 20px;
+    }
+
+    .burger{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .burger span{
+        background-color: white;
+        padding: 1px 10px;
+    }
+
+}
+
